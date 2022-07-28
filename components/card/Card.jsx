@@ -22,7 +22,6 @@ export default function Card(props) {
 
   return (
     <div className={styles.container}>
-      Card
       <motion.div
         className={cls(sizeClasses[size], styles.imgMotionWrapper)}
         whileHover={{ scale: 1.2 }}

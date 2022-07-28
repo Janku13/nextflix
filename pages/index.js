@@ -18,7 +18,73 @@ export default function Home() {
         subTitle="O ninja mais forte"
         imgUrl="/static/heroImg.webp"
       />
-      <SectionCards />
+      <SectionCards
+        title="large"
+        listOfCards={[
+          <Card imgUrl="/static/heroImg.webp" size="large" />,
+          <Card imgUrl="/static/heroImg.webp" size="large" />,
+          <Card imgUrl="/static/heroImg.webp" size="large" />,
+          <Card imgUrl="/static/heroImg.webp" size="large" />,
+          <Card imgUrl="/static/heroImg.webp" size="large" />,
+          <Card imgUrl="/static/heroImg.webp" size="large" />,
+          <Card imgUrl="/static/heroImg.webp" size="large" />,
+          <Card imgUrl="/static/heroImg.webp" size="large" />,
+          <Card imgUrl="/static/heroImg.webp" size="large" />,
+          <Card imgUrl="/static/heroImg.webp" size="large" />,
+          <Card imgUrl="/static/heroImg.webp" size="large" />,
+          <Card imgUrl="/static/heroImg.webp" size="large" />,
+        ]}
+      />
+      <SectionCards
+        title="medium"
+        listOfCards={[
+          <Card imgUrl="/static/heroImg.webp" size="medium" />,
+          <Card imgUrl="/static/heroImg.webp" size="medium" />,
+          <Card imgUrl="/static/heroImg.webp" size="medium" />,
+          <Card imgUrl="/static/heroImg.webp" size="medium" />,
+          <Card imgUrl="/static/heroImg.webp" size="medium" />,
+          <Card imgUrl="/static/heroImg.webp" size="medium" />,
+          <Card imgUrl="/static/heroImg.webp" size="medium" />,
+          <Card imgUrl="/static/heroImg.webp" size="medium" />,
+          <Card imgUrl="/static/heroImg.webp" size="medium" />,
+          <Card imgUrl="/static/heroImg.webp" size="medium" />,
+          <Card imgUrl="/static/heroImg.webp" size="medium" />,
+          <Card imgUrl="/static/heroImg.webp" size="medium" />,
+          <Card imgUrl="/static/heroImg.webp" size="medium" />,
+          <Card imgUrl="/static/heroImg.webp" size="medium" />,
+          <Card imgUrl="/static/heroImg.webp" size="medium" />,
+          <Card imgUrl="/static/heroImg.webp" size="medium" />,
+        ]}
+      />
+      <SectionCards
+        title="Small"
+        listOfCards={[
+          <Card imgUrl="/static/heroImg.webp" size="small" />,
+          <Card imgUrl="/static/heroImg.webp" size="small" />,
+          <Card imgUrl="/static/heroImg.webp" size="small" />,
+          <Card imgUrl="/static/heroImg.webp" size="small" />,
+          <Card imgUrl="/static/heroImg.webp" size="small" />,
+          <Card imgUrl="/static/heroImg.webp" size="small" />,
+          <Card imgUrl="/static/heroImg.webp" size="small" />,
+          <Card imgUrl="/static/heroImg.webp" size="small" />,
+          <Card imgUrl="/static/heroImg.webp" size="small" />,
+          <Card imgUrl="/static/heroImg.webp" size="small" />,
+          <Card imgUrl="/static/heroImg.webp" size="small" />,
+          <Card imgUrl="/static/heroImg.webp" size="small" />,
+          <Card imgUrl="/static/heroImg.webp" size="small" />,
+          <Card imgUrl="/static/heroImg.webp" size="small" />,
+          <Card imgUrl="/static/heroImg.webp" size="small" />,
+          <Card imgUrl="/static/heroImg.webp" size="small" />,
+          <Card imgUrl="/static/heroImg.webp" size="small" />,
+          <Card imgUrl="/static/heroImg.webp" size="small" />,
+          <Card imgUrl="/static/heroImg.webp" size="small" />,
+          <Card imgUrl="/static/heroImg.webp" size="small" />,
+          <Card imgUrl="/static/heroImg.webp" size="small" />,
+          <Card imgUrl="/static/heroImg.webp" size="small" />,
+          <Card imgUrl="/static/heroImg.webp" size="small" />,
+          <Card imgUrl="/static/heroImg.webp" size="small" />,
+        ]}
+      />
     </div>
   );
 }
