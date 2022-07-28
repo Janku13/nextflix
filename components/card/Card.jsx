@@ -24,7 +24,7 @@ export default function Card(props) {
     <div className={styles.container}>
       <motion.div
         className={cls(sizeClasses[size], styles.imgMotionWrapper)}
-        whileHover={{ scale: 1.2 }}
+        whileHover={{ scaleY: 1.1 }}
       >
         <Image
           src={imgSrc}
