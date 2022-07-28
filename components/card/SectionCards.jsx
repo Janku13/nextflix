@@ -6,8 +6,8 @@ export default function SectionCards(props) {
     <section className={styles.container}>
       <h2 className={styles.title}>{title}</h2>
       <div className={styles.cardWrapper}>
-        {listOfCards.map((card) => {
-          return card;
+        {listOfCards.map((card, idx) => {
+          return <Card imgUrl={card.imgUrl} size={card.size} key={idx} />;
         })}
       </div>
     </section>
