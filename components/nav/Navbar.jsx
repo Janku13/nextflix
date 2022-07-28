@@ -1,5 +1,6 @@
 import styles from './navbar.module.css';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -20,7 +21,14 @@ export default function Navbar(props) {
       <div className={styles.wrapper}>
         <Link href="/">
           <a className={styles.logoLink}>
-            <div className={styles.logoWrapper}>Nextflix</div>
+            <div className={styles.logoWrapper}>
+              <Image
+                src="/static/netflix.svg"
+                alt="logo netflix"
+                width="128px"
+                height="34px"
+              />
+            </div>
           </a>
         </Link>
 
@@ -39,6 +47,12 @@ export default function Navbar(props) {
               onClick={() => setShowLoggout((prev) => !prev)}
             >
               <p className={styles.username}>{username}</p>
+              <Image
+                src="/static/expand.svg"
+                alt="expand dropdown"
+                width="24px"
+                height="24px"
+              />
             </button>
 
             {showLoggout && (

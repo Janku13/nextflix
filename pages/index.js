@@ -1,5 +1,7 @@
 import Head from 'next/head';
 import Banner from '../components/banner/Banner';
+import Card from '../components/card/Card';
+import SectionCards from '../components/card/SectionCards';
 import Navbar from '../components/nav/Navbar';
 import styles from '../styles/Home.module.css';
 
@@ -16,7 +18,7 @@ export default function Home() {
         subTitle="O ninja mais forte"
         imgUrl="/static/heroImg.webp"
       />
-      {/* <Card /> */}
+      <SectionCards />
     </div>
   );
 }
