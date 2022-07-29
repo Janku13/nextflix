@@ -58,7 +58,7 @@ export default function Navbar(props) {
             {showLoggout && (
               <div className={styles.navDropdown}>
                 <div>
-                  <Link href="/login">
+                  <Link href="/auth/login">
                     <a className={styles.linkName} onClick>
                       Sign out
                     </a>

@@ -1,4 +1,7 @@
 import Head from 'next/head';
+import { useRouter } from 'next/router';
+import { useState } from 'react';
+import { useEffect } from 'react';
 import Banner from '../components/banner/Banner';
 import SectionCards from '../components/card/SectionCards';
 import Navbar from '../components/nav/Navbar';
@@ -24,6 +27,13 @@ export const getServerSideProps = async (ctx) => {
 };
 
 export default function Home({ disney, crunchyroll, netflix, hbo, popular }) {
+  const router = useRouter();
+  const [user, setUser] = useState(true);
+  useEffect(() => {
+    if (!user) {
+      router.push('/auth/login');
+    }
+  }, [user]);
   return (
     <div className={styles.container}>
       <Head>
