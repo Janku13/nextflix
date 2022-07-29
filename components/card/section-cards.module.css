@@ -25,8 +25,10 @@
   margin-right: 0.75rem
     /* 12px */
   ;
-  overflow-x: scroll;
+  overflow-x: auto;
   overflow-y: hidden;
+  /* overscroll-behavior: contain;
+  scroll-behavior: contain; */
 }
 
 .wrap {
