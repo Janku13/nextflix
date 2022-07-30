@@ -2,7 +2,7 @@ import dummyVideos from '../data/videos.json';
 const fetchVideos = async (url) => {
   const YOUTUBE_API_KEY = process.env.YOUTUBE_API_KEY;
   const BASE_URL = 'youtube.googleapis.com/youtube/v3';
-  const YOUTUBE_URL = `https://${BASE_URL}/${url}&maxResults=25&key=${YOUTUBE_API_KEY}`;
+  const YOUTUBE_URL = `https://${BASE_URL}/${url}&maxResults=25&key=${YOUTUBE_API_KE}`;
 
   const response = await fetch(YOUTUBE_URL);
 

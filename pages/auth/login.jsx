@@ -8,7 +8,7 @@ import styles from '../../styles/Login.module.css';
 
 const Login = () => {
   const router = useRouter();
-  const [email, setEmail] = useState('mohammed.maljoke@gmail.com');
+  const [email, setEmail] = useState('');
   const [emailError, setEmailError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
@@ -27,7 +27,7 @@ const Login = () => {
 
   const handleSubmitLogin = async (e) => {
     e.preventDefault();
-    if (email && email === 'mohammed.maljoke@gmail.com') {
+    if (email) {
       setEmailError('');
       try {
         setIsLoading(true);
