@@ -5,7 +5,9 @@ import { useEffect } from 'react';
 import Banner from '../components/banner/Banner';
 import SectionCards from '../components/card/SectionCards';
 import Navbar from '../components/nav/Navbar';
+import { magic } from '../services/magic-auth';
 import { getCommunVideos, getPopularVideos } from '../services/video';
+
 import styles from '../styles/Home.module.css';
 
 export const getServerSideProps = async (ctx) => {
@@ -28,12 +30,28 @@ export const getServerSideProps = async (ctx) => {
 
 export default function Home({ disney, crunchyroll, netflix, hbo, popular }) {
   const router = useRouter();
-  const [user, setUser] = useState(true);
+  const [user, setUser] = useState();
+
   useEffect(() => {
-    if (!user) {
-      router.push('/auth/login');
+    async function getUsername() {
+      try {
+        console.log({ a: 'email' });
+        const { email } = await magic.user.getMetadata();
+        console.log({ email });
+        if (email) {
+          console.log(email);
+          setUser(email);
+        } else {
+          // router.push('/auth/login');
+        }
+      } catch (error) {
+        console.log('Error retrieving email:', error);
+        // router.push('/auth/login');
+      }
     }
-  }, [user]);
+    getUsername();
+  }, []);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -41,7 +59,7 @@ export default function Home({ disney, crunchyroll, netflix, hbo, popular }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.main}>
-        <Navbar username="moham@gmail.com" />
+        <Navbar username={user} />
         <Banner
           title="Naruto Shippuden Ultimate Ninja"
           subTitle="O ninja mais forte"

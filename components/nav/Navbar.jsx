@@ -3,11 +3,13 @@ import { useRouter } from 'next/router';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import { magic } from '../../services/magic-auth';
 
 export default function Navbar(props) {
   const router = useRouter();
   const { username } = props;
   const [showLoggout, setShowLoggout] = useState(false);
+
   const handleOnClickHome = (e) => {
     e.preventDefault();
     router.push('/');
@@ -15,6 +17,15 @@ export default function Navbar(props) {
   const handleOnClickList = (e) => {
     e.preventDefault();
     router.push('/browse/my-list');
+  };
+  const signOutFunc = async (e) => {
+    e.preventDefault();
+    try {
+      await magic.user.logout();
+    } catch (e) {
+      console.log(e);
+    }
+    router.push('/auth/login');
   };
   return (
     <div className={styles.container}>
@@ -58,11 +69,10 @@ export default function Navbar(props) {
             {showLoggout && (
               <div className={styles.navDropdown}>
                 <div>
-                  <Link href="/auth/login">
-                    <a className={styles.linkName} onClick>
-                      Sign out
-                    </a>
-                  </Link>
+                  <button className={styles.linkName} onClick={signOutFunc}>
+                    Sign out
+                  </button>
+
                   <div className={styles.lineWrapper}></div>
                 </div>
               </div>

@@ -11,9 +11,7 @@ export default function Banner(props) {
     backgroundSize: 'cover',
     backgroundPosition: '50% 50%',
   };
-  const handleOnPlay = () => {
-    console.log('you clicked me');
-  };
+  const handleOnPlay = () => {};
   return (
     <div className={styles.container}>
       <div className={styles.leftWrapper}>
