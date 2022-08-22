@@ -5,7 +5,7 @@ import '../styles/globals.css';
 import Loading from '../components/loading/Loading';
 
 function MyApp({ Component, pageProps }) {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false); //muda para true dps
   const router = useRouter();
   const handleComplete = () => {
     setIsLoading(false);
@@ -19,15 +19,15 @@ function MyApp({ Component, pageProps }) {
     };
   }, [router]);
   useEffect(() => {
-    async function checkIsLoggedIn() {
-      const isLoggedIn = await magic.user.isLoggedIn();
-      if (isLoggedIn) {
-        router.push('/');
-      } else {
-        router.push('/auth/login');
-      }
-    }
-    checkIsLoggedIn();
+    // async function checkIsLoggedIn() {
+    //   const isLoggedIn = await magic.user.isLoggedIn();
+    //   if (isLoggedIn) {
+    //     router.push('/');
+    //   } else {
+    //     router.push('/auth/login');
+    //   }
+    // }
+    // checkIsLoggedIn();
   }, []);
   return isLoading ? <Loading /> : <Component {...pageProps} />;
 }

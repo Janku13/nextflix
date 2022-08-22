@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Card from './Card';
 import styles from './section-cards.module.css';
 export default function SectionCards(props) {
@@ -8,7 +9,14 @@ export default function SectionCards(props) {
       <h2 className={styles.title}>{title}</h2>
       <div className={styles.cardWrapper}>
         {listOfCards.map((card, idx) => {
-          return <Card imgUrl={card.imgUrl} size={size} key={idx} />;
+          console.log(card);
+          return (
+            <Link key={idx} href={`/video/${card.id}`}>
+              <a>
+                <Card imgUrl={card.imgUrl} size={size} />
+              </a>
+            </Link>
+          );
         })}
       </div>
     </section>

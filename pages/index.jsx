@@ -61,6 +61,7 @@ export default function Home({ disney, crunchyroll, netflix, hbo, popular }) {
       <div className={styles.main}>
         <Navbar username={user} />
         <Banner
+          videoId="gxc6y2ZVfCU"
           title="Naruto Shippuden Ultimate Ninja"
           subTitle="O ninja mais forte"
           imgUrl="/static/heroImg.webp"

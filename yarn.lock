@@ -155,24 +155,24 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
-"@magic-sdk/commons@^4.1.1":
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/@magic-sdk/commons/-/commons-4.1.1.tgz#16dc84a64cc7cafae50c4061acae46bb587c623d"
-  integrity sha512-nHbMRkssAC1z5rHpPwkiYolp3qxmtnkNaynGlreVxgtPTemJ8USRrXjg/cF0WVhRwtPTpegdTvtpJWOMd0Ratg==
+"@magic-sdk/commons@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@magic-sdk/commons/-/commons-5.0.0.tgz#b2be9d3f4e168ae9edb09887071af422616db0e8"
+  integrity sha512-vV+25Ulyz1Y9NdnrbjGEP9OVTVO9GHuTCXme177LSqyNDiZUlFdLpJ9KOQ5iDWMU/bHni5UhGuSZ4D3xl8VoPg==
 
-"@magic-sdk/provider@^8.1.1":
-  version "8.2.0"
-  resolved "https://registry.yarnpkg.com/@magic-sdk/provider/-/provider-8.2.0.tgz#50dd08ca79223f41a5f9bad5a26d0e716f20dbcf"
-  integrity sha512-gm8pHvHbXctAp393M0W8eocP7/qifpqBIIrIXiMKpdlGRKzuMvv5x1LQvb8CuOjPIK3eXxY2qdCZnvWE2qiV0A==
+"@magic-sdk/provider@^9.0.0":
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/@magic-sdk/provider/-/provider-9.0.0.tgz#e179dd02a90d73f2115c9b0aab5c59d14d504719"
+  integrity sha512-0W8b5thGF4t9cgRFeiL6O2hLgv3AsjLwbfbaps4N0ugJqFfg5Luci0LzUBayXRSNTDEFh7aU2iG2fbSPfPeQ0Q==
   dependencies:
-    "@magic-sdk/types" "^7.1.1"
+    "@magic-sdk/types" "^8.0.0"
     eventemitter3 "^4.0.4"
     web3-core "1.5.2"
 
-"@magic-sdk/types@^7.1.1":
-  version "7.2.0"
-  resolved "https://registry.yarnpkg.com/@magic-sdk/types/-/types-7.2.0.tgz#86b5a92291a892d0da40808855ef62128ceb4795"
-  integrity sha512-YpfRhY6dBjMEvW+YApoDTSVWBqb5skOyoOcAcKbQvkuV4yCBBvJXAstOPYvFp7Vgw97AQkuie7mLdx7EZahS1Q==
+"@magic-sdk/types@^8.0.0":
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/@magic-sdk/types/-/types-8.0.0.tgz#438de5a7b833aea87cb72c1ac43d799eb8510c50"
+  integrity sha512-D0ii1EHq0c/GHzkiop0VoBkp530peCR23Vd20zOrG+ZY7zYqwcI810kmm0JKkwrszfbaZOqNTPIv1SUe7PS6BQ==
 
 "@motionone/animation@^10.12.0":
   version "10.13.1"
@@ -1187,6 +1187,11 @@ evp_bytestokey@^1.0.3:
     md5.js "^1.3.4"
     safe-buffer "^5.1.1"
 
+exenv@^1.2.0:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/exenv/-/exenv-1.2.2.tgz#2ae78e85d9894158670b03d47bec1f03bd91bb9d"
+  integrity sha512-Z+ktTxTwv9ILfgKCk32OX3n/doe+OcLTRtqK9pcL+JsP3J1/VW8Uvl4ZjLlKqeW4rzK4oesDOGMEMRIZqtP4Iw==
+
 ext@^1.1.2:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/ext/-/ext-1.6.0.tgz#3871d50641e874cc172e2b53f919842d19db4c52"
@@ -1761,7 +1766,7 @@ lodash.merge@^4.6.2:
   resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.2.tgz#558aa53b43b661e1925a0afdfa36a9a1085fe57a"
   integrity sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==
 
-loose-envify@^1.1.0, loose-envify@^1.4.0:
+loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/loose-envify/-/loose-envify-1.4.0.tgz#71ee51fa7be4caec1a63839f7e682d8132d30caf"
   integrity sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==
@@ -1775,14 +1780,14 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
-magic-sdk@^8.1.1:
-  version "8.1.1"
-  resolved "https://registry.yarnpkg.com/magic-sdk/-/magic-sdk-8.1.1.tgz#e2b31d492e1f574137953acaeb237558537a57d0"
-  integrity sha512-BLyAufrVM/6F7Q9rKIz1r0UZnYG4SOnr650lVsJGa5V1pc4FOWBfxr7UaxhHoP6zJ7faUvY7K/x1VWDQbmYUzw==
+magic-sdk@^9.0.0:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/magic-sdk/-/magic-sdk-9.0.0.tgz#9dc46687a646ab8bf00f99347cdf31984df7769c"
+  integrity sha512-FBW22kN2EkAWrXhuOHgIH9iRJkAI4Zq4HpNXiIGujmjsrhIyKoFz60W1vK3Ak/1hHw59KObSyyjU3RsIGvL0Wg==
   dependencies:
-    "@magic-sdk/commons" "^4.1.1"
-    "@magic-sdk/provider" "^8.1.1"
-    "@magic-sdk/types" "^7.1.1"
+    "@magic-sdk/commons" "^5.0.0"
+    "@magic-sdk/provider" "^9.0.0"
+    "@magic-sdk/types" "^8.0.0"
     localforage "^1.7.4"
 
 md5.js@^1.3.4:
@@ -2107,7 +2112,7 @@ process@^0.11.10:
   resolved "https://registry.yarnpkg.com/process/-/process-0.11.10.tgz#7332300e840161bda3e69a1d1d91a7d4bc16f182"
   integrity sha512-cdGef/drWFoydD1JsMzuFf8100nZl+GT+yacc2bEced5f9Rjk4z+WtFUTBu9PhOi9j/jfmBPu0mMEY4wIdAF8A==
 
-prop-types@^15.8.1:
+prop-types@^15.7.2, prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -2154,6 +2159,21 @@ react-is@^16.13.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
+
+react-lifecycles-compat@^3.0.0:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
+  integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
+
+react-modal@^3.15.1:
+  version "3.15.1"
+  resolved "https://registry.yarnpkg.com/react-modal/-/react-modal-3.15.1.tgz#950ce67bfef80971182dd0ed38f2d9b1a681288b"
+  integrity sha512-duB9bxOaYg7Zt6TMFldIFxQRtSP+Dg3F1ZX3FXxSUn+3tZZ/9JCgeAQKDg7rhZSAqopq8TFRw3yIbnx77gyFTw==
+  dependencies:
+    exenv "^1.2.0"
+    prop-types "^15.7.2"
+    react-lifecycles-compat "^3.0.0"
+    warning "^4.0.3"
 
 react@18.2.0:
   version "18.2.0"
@@ -2569,6 +2589,13 @@ v8-compile-cache@^2.0.3:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/v8-compile-cache/-/v8-compile-cache-2.3.0.tgz#2de19618c66dc247dcfb6f99338035d8245a2cee"
   integrity sha512-l8lCEmLcLYZh4nbunNZvQCJc5pv7+RCwa8q/LdUx8u7lsWvPDKmpodJAJNwkAhJC//dFY48KuIEmjtd4RViDrA==
+
+warning@^4.0.3:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/warning/-/warning-4.0.3.tgz#16e9e077eb8a86d6af7d64aa1e05fd85b4678ca3"
+  integrity sha512-rpJyN222KWIvHJ/F53XSZv0Zl/accqHR8et1kpaMTD/fLCRxtV8iX8czMzY7sVZupTI3zcUTg8eycS2kNF9l6w==
+  dependencies:
+    loose-envify "^1.0.0"
 
 web3-core-helpers@1.5.2:
   version "1.5.2"

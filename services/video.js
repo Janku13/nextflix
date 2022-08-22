@@ -1,4 +1,5 @@
 import dummyVideos from '../data/videos.json';
+
 const fetchVideos = async (url) => {
   const YOUTUBE_API_KEY = process.env.YOUTUBE_API_KEY;
   const BASE_URL = 'youtube.googleapis.com/youtube/v3';
@@ -63,6 +64,10 @@ const getVideos = async (url) => {
 
 export const getPopularVideos = async (place = 'BR') => {
   const URL = `videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=${place}`;
+  return await getVideos(URL);
+};
+export const getYouTubeVideoById = async (videoId) => {
+  const URL = `videos?part=snippet%2CcontentDetails%2Cstatistics&id=${videoId}`;
   return await getVideos(URL);
 };
 
